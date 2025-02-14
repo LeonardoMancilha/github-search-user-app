@@ -20,6 +20,17 @@ Agora, você pode pesquisar facilmente um usuário no GitHub e acessar informaç
 - Feedback de Carregamento: Exibe uma mensagem de "Carregando..." enquanto busca as informações do perfil do GitHub.
 - Animação Suave: Transições suaves entre os temas claro e escuro, proporcionando uma experiência mais agradável ao usuário.
 
+## Performance e Qualidade
+
+O aplicativo foi otimizado para garantir uma experiência rápida, acessível e com boas práticas de desenvolvimento. Durante a análise do **Lighthouse**, as seguintes pontuações foram obtidas:
+
+- **Performance: 100** – O site foi otimizado para garantir um desempenho excelente, com tempo de carregamento rápido e baixo consumo de recursos.
+- **Acessibilidade: 100** – A aplicação foi projetada com foco na acessibilidade, garantindo que todos os usuários possam navegar de forma eficiente, inclusive aqueles com necessidades especiais.
+- **Melhores Práticas: 100** – O projeto segue as melhores práticas de desenvolvimento, com foco em segurança, confiabilidade e manutenção de código.
+- **SEO: 100** – A otimização para motores de busca foi feita de forma eficaz, o que garante uma melhor visibilidade do site nos resultados de pesquisa.
+
+Essas pontuações indicam que a aplicação não apenas oferece uma excelente experiência para o usuário, mas também é acessível e bem otimizada para os motores de busca e para boas práticas de desenvolvimento.
+
 # Desafio Original
 
 Este projeto foi inspirado em um desafio do <a href="https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6" target="_blank">Frontend Mentor</a>, onde o objetivo era criar uma aplicação para exibir detalhes de um perfil de usuário do GitHub. No entanto, decidi ir além e adicionar recursos como:
