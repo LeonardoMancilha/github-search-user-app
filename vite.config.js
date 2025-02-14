@@ -7,6 +7,9 @@ export default defineConfig({
     optimizeDeps: {
       include: ['react-feather'],
     },
+    rollupOptions: {
+      external: ["react-icons", "react-icons/fa"],
+    }
   },
   resolve: {
     alias: {
