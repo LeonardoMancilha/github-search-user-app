@@ -5,11 +5,8 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   build: {
     optimizeDeps: {
-      include: ['react-feather'],
+      include: ['react-feather', 'react-icons'],
     },
-    rollupOptions: {
-      external: ["react-icons", "react-icons/fa"],
-    }
   },
   resolve: {
     alias: {
