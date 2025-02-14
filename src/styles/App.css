@@ -62,3 +62,9 @@ button:hover {
     width: 90%;
   }
 }
+
+@media (max-width: 390px) {
+  .header_section h1 {
+    font-size: 18px;
+  }
+}
