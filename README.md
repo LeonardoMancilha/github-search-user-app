@@ -4,7 +4,9 @@ Este projeto é uma aplicação web desenvolvida inicialmente como parte de um d
 
 Agora, você pode pesquisar facilmente um usuário no GitHub e acessar informações como repositórios, seguidores e atividades recentes diretamente na interface do aplicativo.
 
+![Captura de tela 2025-02-14 183228](https://github.com/user-attachments/assets/780190b1-55f9-492b-a285-f6e647cfea7c)
 
+![Captura de tela 2025-02-14 192712](https://github.com/user-attachments/assets/035c614f-e4ff-4aea-8cdf-70c2d7888b44)
 
 ## Funcionalidades Principais
 
