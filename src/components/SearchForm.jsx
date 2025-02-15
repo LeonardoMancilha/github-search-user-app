@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search } from "react-feather";
 import styles from "./SearchForm.module.css";
 
-function SearchForm({ onSearch, setSearchTerm }) {
+function SearchForm({ onSearch, setSearchTerm, inputRef }) {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -16,11 +16,7 @@ function SearchForm({ onSearch, setSearchTerm }) {
 
   const handleChange = (e) => {
     setInput(e.target.value);
-
-    // Atualiza o termo de pesquisa com um pequeno delay
-    setTimeout(() => {
-      setSearchTerm(e.target.value);
-    }, 300);
+    setSearchTerm(e.target.value); // Atualiza o termo de pesquisa
   };
 
   return (
@@ -32,6 +28,7 @@ function SearchForm({ onSearch, setSearchTerm }) {
             aria-label="Pesquisar usuário"
           />
           <input
+            ref={inputRef} // Ref para o campo de input
             className={styles.input}
             type="text"
             id="text"

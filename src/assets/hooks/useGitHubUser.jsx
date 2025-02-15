@@ -2,12 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 export function useGitHubUser() {
   const [user, setUser] = useState(null);
-  const [totalRepos] = useState(0);
-  const [events] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  const [isInputFocused, setIsInputFocused] = useState(false);
 
   const inputRef = useRef(null); // Referência para o campo de input
 
@@ -30,32 +26,27 @@ export function useGitHubUser() {
   };
 
   useEffect(() => {
-    const handleKeyPress = (event) => {
-      // Verifica se o campo de pesquisa está em foco
-      if (isInputFocused) {
-        return; 
+    const handleKeyDown = (event) => {
+      // Verifica se o foco não está no campo de input
+      if (event.target.tagName === "INPUT") {
+        return; // Se o foco está no campo de input, não faz nada
       }
 
-      if (event.key === "p" && searchTerm.trim()) {
-        event.preventDefault();
-        handleSearch(searchTerm);
+      // Verifica se a tecla pressionada é "P" e há um termo de pesquisa válido
+      if (event.key.toLowerCase() === "p" && searchTerm.trim()) {
+        event.preventDefault(); // Impede o comportamento padrão da tecla
+        handleSearch(searchTerm); // Chama a busca
       }
     };
 
-    window.addEventListener("keydown", handleKeyPress);
+    // Adiciona o evento de keydown
+    window.addEventListener("keydown", handleKeyDown);
 
+    // Limpeza do evento
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [searchTerm, user, isInputFocused]); // Inclui isInputFocused no array de dependências
+  }, [searchTerm]); // A dependência é apenas o searchTerm
 
-  const handleFocus = () => {
-    setIsInputFocused(true); // Define o foco como verdadeiro quando o campo está em foco
-  };
-
-  const handleBlur = () => {
-    setIsInputFocused(false); // Define o foco como falso quando o campo perde o foco
-  };
-
-  return { user, totalRepos, events, loading, error, handleSearch, searchTerm, setSearchTerm, inputRef, handleFocus, handleBlur };
+  return { user, loading, handleSearch, searchTerm, setSearchTerm, inputRef };
 }
