@@ -25,28 +25,5 @@ export function useGitHubUser() {
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      // Verifica se o foco não está no campo de input
-      if (event.target.tagName === "INPUT") {
-        return; // Se o foco está no campo de input, não faz nada
-      }
-
-      // Verifica se a tecla pressionada é "P" e há um termo de pesquisa válido
-      if (event.key.toLowerCase() === "p" && searchTerm.trim()) {
-        event.preventDefault(); // Impede o comportamento padrão da tecla
-        handleSearch(searchTerm); // Chama a busca
-      }
-    };
-
-    // Adiciona o evento de keydown
-    window.addEventListener("keydown", handleKeyDown);
-
-    // Limpeza do evento
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [searchTerm]); // A dependência é apenas o searchTerm
-
   return { user, loading, handleSearch, searchTerm, setSearchTerm, inputRef };
 }

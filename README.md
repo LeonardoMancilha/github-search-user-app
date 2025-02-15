@@ -21,7 +21,6 @@ Além das funcionalidades principais do GitHub User Search App, implementei algu
 
 - Teclas de atalho para facilitar a navegação:
     - A: Encaminha o usuário para o perfil do GitHub da pessoa pesquisada 🔗
-    - P: Pesquisa rapidamente um novo usuário 🔎
     - D: Exibe o conteúdo do site com fundo preto 🖤
     - L: Exibe o conteúdo do site com fundo branco ⚪
     
