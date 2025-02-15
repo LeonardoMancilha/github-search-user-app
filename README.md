@@ -13,13 +13,21 @@ Agora, você pode pesquisar facilmente um usuário no GitHub e acessar informaç
 - Pesquisa de Perfil GitHub: Pesquise por um usuário no GitHub e visualize informações detalhadas, como repositórios, seguidores e atividades.
 - Tema Escuro e Claro: Altere entre os temas de forma intuitiva com um clique ou usando os atalhos de teclado D para o tema escuro e L para o tema claro.
 - Exibição de informações: Veja o nome do usuário, número de repositórios públicos, seguidores, pull requests criados e muito mais.
-  
-- Atalhos de teclado: Navegue de forma rápida com atalhos:
-    - P: Inicia a busca com o termo de pesquisa.
-    - A: Abre o perfil do usuário no GitHub em uma nova aba.
-  
-- Responsividade: Interface adaptável para dispositivos móveis e desktops, garantindo uma boa experiência em diferentes tamanhos de tela.
-- Feedback de Carregamento: Exibe uma mensagem de "Carregando..." enquanto busca as informações do perfil do GitHub.
+
+Além das funcionalidades principais do GitHub User Search App, implementei algumas melhorias que oferecem uma experiência de usuário ainda mais completa e interativa:
+
+- Exibição do número de pull requests criados pelo usuário 🛠️
+- Indicação de atividade recente: mostra se o usuário fez ou não alguma ação recentemente 📊
+
+- Teclas de atalho para facilitar a navegação:
+    - A: Encaminha o usuário para o perfil do GitHub da pessoa pesquisada 🔗
+    - P: Pesquisa rapidamente um novo usuário 🔎
+    - D: Exibe o conteúdo do site com fundo preto 🖤
+    - L: Exibe o conteúdo do site com fundo branco ⚪
+    
+- Botão Enter: Permite realizar a pesquisa diretamente pressionando a tecla Enter ⏎
+- Carregamento visível: A mensagem "Carregando..." aparece enquanto a API traz os resultados, garantindo uma experiência mais fluida ⏳
+- Mensagens de feedback de tema: Exibe as mensagens "Modo claro ativado" e "Modo escuro ativado" quando o usuário alterna entre os modos de visualização 💡🌙
 - Animação Suave: Transições suaves entre os temas claro e escuro, proporcionando uma experiência mais agradável ao usuário.
 
 ## Performance e Qualidade
